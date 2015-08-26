@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="onlineportfolio"> 
+<head>
+
+	<title>Much awesome! So swirl! ^^;</title>
+	
+	<link href='http://fonts.googleapis.com/css?family=Raleway|Dosis|Nunito|Orbitron|Poiret+One|Lato|Exo:400, 100|Armata|Pontana+Sans|Maven Pro|Pacifico' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+	<link rel="stylesheet" href="/scripts-plugins/animate.min.css">
+	<link href="style.css" type="text/css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+<div id="navbar-popdown" ng-model="toggleNav" ng-show="toggleNavBar()">
+		<div class="nav-block"><a href="#banner">Home</a></div>
+		<div class="nav-block"><a href="#skills">Skills</a></div>
+		<div class="nav-block"><a href="#social">Social</a></div>
+		<div class="nav-block"><a href="#experience">Experience</a></div>
+</div>
+<ng-view>
+
+
+
+</ng-view>
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.4.0/jquery.localScroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.1/jquery.scrollTo.min.js"></script>
+<!-- // <script src="/scripts/parallax.min.js"></script> -->
+
+<!-- Materialize.css -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+<!-- AngularJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.js"></script>
+
+<!-- My Scripts -->
+<script src="indexCtrl.js"></script>
+<script src="/controllers/mainCtrl.js"></script>
+<script src="app.js"></script>
+
+
+</body>
+</html>

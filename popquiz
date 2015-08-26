@@ -1,0 +1,79 @@
+Today’s Pop Quiz!
+7/17/15
+
+
+HTML
+
+
+What is the difference between : block, inline, and inline-block?
+Block elements stack. Inline display makes elements appear in a linear fashion and inline-block functions similarly but can have a height and width.
+
+What is the default display for a div, a span, a paragraph?
+Div: inline
+
+
+How do you include a css file on a page?
+
+<link rel="stylesheet" href="style.css">
+
+How do you include a javascript file on a page?
+<script src="$"></script>
+
+
+Where should css files and javascript files be located?
+Css in the head. Scripts at the bottom of the body.
+
+
+What is semantic HTML? 
+Using html code specifically for it's intended use rather than utility, for instance, using a <p></p> tag to create a space between paragraphs.
+
+
+
+CSS
+7.   What is the selector for the following:
+Select a class: .
+select by id: #
+select by element: Element Name 
+select first child: Element Name > Element Name
+select direct descendant: element name element name ('selects any element within another element, does not have to be direct child')
+select any descendant: element name element name {selects any element within another element, does not have to be a direct child'}
+
+8.   Explain the Box Model in CSS:
+
+Each element is inherently charactertisticc of a box model which includes a MARGIN, then BORDER, then PADDING, then the actual CONTENT.
+Each attribute is nested within each other like this :  Content --> Padding ---> Border ---> Margin.
+
+
+
+
+
+
+Javascript
+9.   What does the statement "use strict" do?
+
+
+10.   Explain closures in javascript?
+	The executed code within a function, before a return statement in some cases.
+
+11.   Explain what context is aka the "this" keyword?  What are the 4 types of bindings dealing with context?
+		When using the "this" keyword, it usually applies to the function or method that is using it. 
+
+12.   Explain the methods bind, call, apply?
+	
+
+13.   What are constructors?  What is the keyword to invoke a constructor?
+	A constructor is a object that creates other objects.
+
+14.   What are prototypes?  
+
+
+15.   If I new up two objects from the same constructor and then add a prototype to one object does it apply back to both objects?
+		No?
+
+16.   If I apply a prototype to a constructor function does it affect objects newed up by that constructor?
+	
+
+17.   What are arrays and objects? Explain the difference between the two.
+
+Arrays are collections of data.
+Objects are collections of data with properties. 
