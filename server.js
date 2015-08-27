@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var http = require('http');
 
 var port = 1337;
-var mongoUri = 'mongodb://localhost:27017/onlineportfolio';
+var mongoUri = 'mongodb://localhost:27017/op';
 
 var app = express();
 

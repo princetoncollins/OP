@@ -20,6 +20,15 @@ body {
 	height: 100%;
 	margin: 0;
 }
+/*SIDEBAR*/
+
+.sidebar {
+	width: 3%;
+	height: 100%;
+	background: rgba(100, 100, 100, 0.2);
+	position: fixed;
+	padding-top: 500px;
+}
 
 div.sidebar > h1 {
 	margin: 0;
@@ -32,10 +41,6 @@ div.sidebar > h1 {
 	-o-transform: rotate(-90deg);
 }
 
-h1 {
-	margin: 0 auto;
-}
-
 /*NAVIGATION BAR*/
 
 #navbar {
@@ -43,15 +48,7 @@ h1 {
 	width: 100%;
 	padding-left: 1400px;
 	margin: 0;
-	position: absolute;
-}
-
-#navbar-popdown {
-	height: 10%;
-	width: 100%;
-	padding-left: 1400px;
-	margin: 0;
-	background: rgba(100, 100, 100, 0.2);
+	position: fixed;
 }
 
 .nav-block {
@@ -75,16 +72,6 @@ div.nav-block > a:hover {
 	color: #fdc010;
 }
 
-/*SIDEBAR*/
-
-.sidebar {
-	width: 3%;
-	height: 100%;
-	background: rgba(100, 100, 100, 0.2);
-	position: fixed;
-	padding-top: 500px;
-}
-
 /*BANNER*/
 
 #banner {
@@ -104,7 +91,7 @@ div.nav-block > a:hover {
 
 
 section#banner > div#content_layer {
-	padding-top: 16.5%;
+	padding-top: 20.5%;
 	padding-left: 33%; 
 }
 
@@ -119,6 +106,8 @@ section#banner > div#content_layer {
 	font-size: 25px;
 	color: #333;
 	padding-left: 170px;
+	position: relative;
+	bottom: 40px;
 }
 
 /*SKILLS*/
@@ -128,7 +117,6 @@ section#banner > div#content_layer {
 }
 
 #skills {
-	position: relative;
 	height: 960px;
 	width: 100%;
 	background-color: #111;

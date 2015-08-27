@@ -5,20 +5,25 @@
 <!-- BANNER -->
 
 <section id="banner">	
-	<!-- NAVIGATION BAR -->
+
+<!-- NAVIGATION BAR -->
+
 	<div id="navbar">
 		<div class="nav-block"><a href="#banner">Home</a></div>
 		<div class="nav-block"><a href="#skills">Skills</a></div>
 		<div class="nav-block"><a href="#social">Social</a></div>
 		<div class="nav-block"><a href="#experience">Experience</a></div>
 	</div>
-    <!-- SIDEBAR -->
+
+<!-- SIDEBAR -->
+
 	<div class="sidebar">
-		<h1>princeton•collins</h1>
+			<h1>princeton•collins</h1>
 	</div>
+
 	<div id="content_layer">
-		<p class="bannertext">princeton collins</p>
-		<p class="banner-subtext"><strong>full stack web developer</strong></p> 
+		<div class="bannertext">princeton collins</div>
+		<div class="banner-subtext"><b>full stack web developer</b></div> 
 	</div>
 </section>
 
@@ -26,20 +31,20 @@
 
 <section id="skills">
 	<div id="content_layer2">
-	<h2>SKILLS</h2>
-	<br>
-	<br>
-	<p>I'm a junior developer with a passion for user interface design and interactive background design.<br>
-	My motivating aspiration is to bring beautiful user experiences to the web, one site at a time.</p>
-	<div><img class="img-contain" src="http://www.nearform.com/wp-content/themes/baseek-child/images/events/nodejs-logo.png"></div>
-	<div><img class="img-contain" src="http://sebastianmetzger.com/wp-content/uploads/2014/08/angularjs.png"></div>
-	<div><img class="img-contain" src="https://upload.wikimedia.org/wikipedia/commons/2/25/HTML5_Shiny_Icon.svg"></div>
-	<div><img class="img-contain" src="http://wizardsplace.com/wp-content/uploads/CSS3Logo.png"></div>
-	<div><img class="img-contain" src="https://static1.squarespace.com/static/513914cde4b0f86e34bbb954/513e41b5e4b03d54a0792254/54d9040be4b0a47608fcd12b/1424284504010/?format=1000w"></div>
-	<div><img class="img-contain" src="https://cozy.io/assets/images/javascript_logo.png"></div>
-	<div><img class="img-contain" src="https://git-for-windows.github.io/img/git_logo.png"></div>
-	<div><img class="img-contain" src="http://elemental.solutions/wp-content/uploads/2014/07/jquery_bumper.sh-600x600.png"></div>
- 	<div style="position: relative; bottom: 40px;"><img class="img-contain" src="http://mean.io/system/assets/img/logos/express.png"></div>
+		<h2>SKILLS</h2>
+		<br>
+		<br>
+		<p>I'm a junior developer with a passion for user interface design and interactive background design.<br>
+		My motivating aspiration is to bring beautiful user experiences to the web, one site at a time.</p>
+		<div><img class="img-contain" src="http://www.nearform.com/wp-content/themes/baseek-child/images/events/nodejs-logo.png"></div>
+		<div><img class="img-contain" src="http://sebastianmetzger.com/wp-content/uploads/2014/08/angularjs.png"></div>
+		<div><img class="img-contain" src="https://upload.wikimedia.org/wikipedia/commons/2/25/HTML5_Shiny_Icon.svg"></div>
+		<div><img class="img-contain" src="http://wizardsplace.com/wp-content/uploads/CSS3Logo.png"></div>
+		<div><img class="img-contain" src="https://static1.squarespace.com/static/513914cde4b0f86e34bbb954/513e41b5e4b03d54a0792254/54d9040be4b0a47608fcd12b/1424284504010/?format=1000w"></div>
+		<div><img class="img-contain" src="https://cozy.io/assets/images/javascript_logo.png"></div>
+		<div><img class="img-contain" src="https://git-for-windows.github.io/img/git_logo.png"></div>
+		<div><img class="img-contain" src="http://elemental.solutions/wp-content/uploads/2014/07/jquery_bumper.sh-600x600.png"></div>
+	 	<div style="position: relative; bottom: 40px;"><img class="img-contain" src="http://mean.io/system/assets/img/logos/express.png"></div>
  	</div>
 </section>
 
@@ -60,17 +65,9 @@
 <!-- FOOTER -->
 
 <section class="footer" style="display: inline-block;">
-
-	<div class="email">
-		<a href="modal-trigger" href="#modal1">contact me</a>
-		<div id="modal1" class="modal">
-			<div class="email-form">
-				<h1>Blahhhhh</h1>
-			</div>
-			<div>
-				<a href="#" class="modal-action modal-close">Hihi</a>
-			</div>
-	</div>
+	
+	<div>
+		<a href="#">contact me</a>
 		<span style="color: #333; padding-left: 10px; padding-right: 10px;"> or </span>
 		<a href="./images/Princeton Resume Tech.pdf">see my resume</a>
 	</div>
@@ -79,13 +76,13 @@
 
 </section>
 
-<script type="text/javascript">
-$(document).ready(function() {
-	$('#navbar').localScroll();
-	$('#banner').parallax("50%", 0.1);
-	$('#skills').parallax("50%", 0.1);
-	$('#social').parallax("50%", 0.1);
-}
+<script>
+// $(document).ready(function() {
+// 	$('#navbar').localScroll();
+// 	$('#banner').parallax("50%", 0.1);
+// 	$('#skills').parallax("50%", 0.1);
+// 	$('#social').parallax("50%", 0.1);
+// }
 
 function parallax() {
 	var content_layer = document.getElementById('content_layer');
@@ -94,10 +91,9 @@ function parallax() {
 	content_layer.style.top = (window.pageYOffset / 1.95) + 'px';
 	content_layer2.style.top = (window.pageYOffset / 4) + 'px';
 	content_layer3.style.top = (window.pageYOffset / 4.5) + 'px';
+}
 
-window.addEventListener("scroll", parallax, false);
-
-});
+	window.addEventListener("scroll", parallax, false);
 </script>
 
 </body>
@@ -159,9 +155,10 @@ window.addEventListener("scroll", parallax, false);
 		<source src="../videos/braiskauai.MP4" type="video/mp4">
 	</video>
 </div> -->
-<script>
-// video.addEventListener('contextmenu', function(e) {
+
+
+
+<!-- // video.addEventListener('contextmenu', function(e) {
 //     e.preventDefault();
 //     return false;
-// }); 
-</script>
+// });  -->
