@@ -28,6 +28,7 @@ body {
 	background: rgba(100, 100, 100, 0.2);
 	position: fixed;
 	padding-top: 500px;
+	z-index: 50;
 }
 
 div.sidebar > h1 {
@@ -49,6 +50,7 @@ div.sidebar > h1 {
 	padding-left: 1400px;
 	margin: 0;
 	position: fixed;
+	z-index: 51;
 }
 
 .nav-block {
@@ -99,6 +101,7 @@ section#banner > div#content_layer {
 	font-family: 'Pacifico', sans-serif;
 	font-size: 100px;
 	color: #333;
+	position: relative;
 }
 
 .banner-subtext {
@@ -122,6 +125,7 @@ section#banner > div#content_layer {
 	background-color: #111;
 	text-align: center;
 	margin: 0;
+	position: relative;
 }
 
 section#skills div#content_layer2 > h2 {

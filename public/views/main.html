@@ -22,7 +22,7 @@
 	</div>
 
 	<div id="content_layer">
-		<div class="bannertext">princeton collins</div>
+		<div class="bannertext bounce">princeton collins</div>
 		<div class="banner-subtext"><b>full stack web developer</b></div> 
 	</div>
 </section>
@@ -77,23 +77,22 @@
 </section>
 
 <script>
-// $(document).ready(function() {
-// 	$('#navbar').localScroll();
-// 	$('#banner').parallax("50%", 0.1);
-// 	$('#skills').parallax("50%", 0.1);
-// 	$('#social').parallax("50%", 0.1);
-// }
-
-function parallax() {
-	var content_layer = document.getElementById('content_layer');
-	var content_layer2 = document.getElementById('content_layer2');
-	var content_layer3 = document.getElementById('content_layer3');
-	content_layer.style.top = (window.pageYOffset / 1.95) + 'px';
-	content_layer2.style.top = (window.pageYOffset / 4) + 'px';
-	content_layer3.style.top = (window.pageYOffset / 4.5) + 'px';
+$(document).ready(function() {
+	$('#navbar').localScroll();
+	$('#banner').parallax("50%", 0.1);
+	$('#skills').parallax("50%", 0.1);
+	$('#social').parallax("50%", 0.1);
 }
 
-	window.addEventListener("scroll", parallax, false);
+// function parallax() {
+// 	var content_layer = document.getElementById('content_layer');
+// 	var content_layer2 = document.getElementById('content_layer2');
+// 	var content_layer3 = document.getElementById('content_layer3');
+// 	content_layer.style.top = (window.pageYOffset / 1.95) + 'px';
+// 	content_layer2.style.top = (window.pageYOffset / 4) + 'px';
+// 	content_layer3.style.top = (window.pageYOffset / 4.5) + 'px';
+// }
+// 	window.addEventListener("scroll", parallax, false);
 </script>
 
 </body>
