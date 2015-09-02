@@ -1,19 +1,17 @@
 <body>
 
-
-
 <!-- BANNER -->
 
 <section id="banner">	
 
 <!-- NAVIGATION BAR -->
 
-	<div id="navbar">
-		<div class="nav-block"><a href="#banner">Home</a></div>
-		<div class="nav-block"><a href="#skills">Skills</a></div>
-		<div class="nav-block"><a href="#social">Social</a></div>
-		<div class="nav-block"><a href="#experience">Experience</a></div>
-	</div>
+	<ul id="navbar">
+		<li class="nav-block"><a href="#banner">Home</a></li>
+		<li class="nav-block"><a href="#skills">Skills</a></li>
+		<li class="nav-block"><a href="#social">Social</a></li>
+		<li class="nav-block"><a href="#experience">Experience</a></li>
+	</ul>
 
 <!-- SIDEBAR -->
 
@@ -22,8 +20,28 @@
 	</div>
 
 	<div id="content_layer">
-		<div class="bannertext bounce">princeton collins</div>
-		<div class="banner-subtext"><b>full stack web developer</b></div> 
+		<div class="bannertext">
+			<span id="animate-nameP">P</span>
+			<span id="animate-nameR">R</span>
+			<span id="animate-nameI">I</span>
+			<span id="animate-nameN">N</span>
+			<span id="animate-nameC">C</span>
+			<span id="animate-nameE">E</span>
+			<span id="animate-nameT">T</span>
+			<span id="animate-nameO">O</span>
+			<span id="animate-nameN2">N</span>
+			&nbsp;&nbsp;
+			<span id="animate-nameC2">C</span>
+			<span id="animate-nameO2">O</span>
+			<span id="animate-nameL">L</span>
+			<span id="animate-nameL2">L</span>
+			<span id="animate-nameI2">I</span>
+			<span id="animate-nameN3">N</span>
+			<span id="animate-nameS">S</span>
+
+
+		</div>
+		<!-- <div class="banner-subtext"><b>full stack web developer</b></div>  -->
 	</div>
 </section>
 
@@ -68,7 +86,7 @@
 	
 	<div>
 		<a href="#">contact me</a>
-		<span style="color: #333; padding-left: 10px; padding-right: 10px;"> or </span>
+		<span style="font-family: 'Pacifico'; font-size: 20px; color: #333; padding-left: 10px; padding-right: 10px;"> or </span>
 		<a href="./images/Princeton Resume Tech.pdf">see my resume</a>
 	</div>
 	
@@ -78,7 +96,7 @@
 
 <script>
 $(document).ready(function() {
-	$('#navbar').localScroll();
+	$('#navbar').localScroll(800);
 	$('#banner').parallax("50%", 0.1);
 	$('#skills').parallax("50%", 0.1);
 	$('#social').parallax("50%", 0.1);
@@ -90,7 +108,7 @@ $(document).ready(function() {
 // 	var content_layer3 = document.getElementById('content_layer3');
 // 	content_layer.style.top = (window.pageYOffset / 1.95) + 'px';
 // 	content_layer2.style.top = (window.pageYOffset / 4) + 'px';
-// 	content_layer3.style.top = (window.pageYOffset / 4.5) + 'px';
+// 	content_layer3.style.top = (window.pageYOffset / 4) + 'px';
 // }
 // 	window.addEventListener("scroll", parallax, false);
 </script>
