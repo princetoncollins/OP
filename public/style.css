@@ -8,73 +8,94 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     background: transparent;
 }
 
-html {
-	margin: 0;
-	height: 100%;
-	width: 100%;
-} 
-
-body {
-	background: #000;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-}
-/*SIDEBAR*/
-
-.sidebar {
-	width: 3%;
-	height: 100%;
-	background: rgba(100, 100, 100, 0.2);
-	position: fixed;
-	padding-top: 500px;
-	z-index: 50;
-}
-
-div.sidebar > h1 {
-	margin: 0;
-	font-family: 'Orbitron', sans-serif;
-	font-size: 30px;
-	color: #ffd700;
-	-webkit-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);
-	-o-transform: rotate(-90deg);
-}
-
 /*NAVIGATION BAR*/
 
-#navbar {
-	height: 10%;
+header {
+	height: 100px;
 	width: 100%;
-	padding-left: 1400px;
+	padding-left: 60px;
+	text-align: left;
 	margin: 0;
+	float: left;
 	position: fixed;
 	z-index: 51;
+	background: transparent;
+}	
+
+nav {
+	width: 100%;
+	margin: 0 auto;
+	float: left;
 }
 
-.nav-block {
-	padding: 10px;
-	padding-top: 35px;
-	text-align: center;
-	font-family: 'Maven Pro', sans-serif;
-	font-size: 20px;
-	display: inline-block;
-	margin: 0;
+header ul { 
+	float: left; 
 }
 
-ul > li.nav-block > a {
+header li { 
+	display: inline; 
+	float: left;
+}
+
+header a {
 	text-decoration: none;
-	color: #333;
 	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+header li#nav-home a {
+	color: transparent;
+	font-family: 'Orbitron', sans-serif;
+	padding-left: 1290px;
+	pointer-events: none;
+}
+
+header a.active, header a:hover {
+	text-decoration: none;
+	color: #ffd730;
 	font-weight: bold;
 }
 
-ul > li.nav-block > a:hover {
-	color: #fdc010;
+header li {
+	margin-right: 30px;
+}
+
+header.large {
+	height: 120px;
+}
+
+header.large li {
+	margin-top: 45px;
+}
+
+header.small {
+	height: 60px;
+	background: #333;
+}
+
+header.small li {
+	margin-top: 19px;
+}
+
+header.small li#nav-home a {
+	color: #ffd700;
+	pointer-events: all;
+}
+
+header, nav, a, li{
+  transition: all 1s;
+  -moz-transition: all 1s; /* Firefox 4 */
+  -webkit-transition: all 1s; /* Safari and Chrome */
+  -o-transition: all 1s; /* Opera */
 }
 
 /*BANNER*/
+
+#content_layer {
+	position: relative;
+}
 
 #banner {
 	position: relative;
@@ -87,17 +108,14 @@ ul > li.nav-block > a:hover {
   	-o-background-size: cover;
 }
 
-#content_layer {
-	position: relative;
-}
-
-
 section#banner > div#content_layer {
-	padding-top: 21%;
-	padding-left: 28%; 
+	padding-top: 24%;
+	padding-left: 28%
 }
 
 .bannertext {
+	display: flex;
+	margin: 0 auto;
 	font-family: 'Lato', sans-serif;
 	font-size: 100px;
 	color: #333;
@@ -105,9 +123,11 @@ section#banner > div#content_layer {
 
 .banner-subtext {
 	font-family: 'Maven Pro', sans-serif;
-	font-size: 25px;
+	font-size: 35px;
 	color: #333;
-	padding-left: 170px;
+	position: absolute;
+	bottom: 40px;
+	padding-left: 350px;
 }
 
 /*SKILLS*/
@@ -117,7 +137,9 @@ section#banner > div#content_layer {
 }
 
 #skills {
-	height: 960px;
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
+	height: 980px;
 	width: 100%;
 	background-color: #111;
 	text-align: center;
@@ -159,28 +181,45 @@ section#skills div#content_layer2 > p {
 }
 
 #social {
-	background: url(images/cuties.JPG) no-repeat center center fixed;
+	background: white;
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-	height: 880px;
+	height: 980px;
 	width: 100%;
 	text-align: center;
+	position: relative;
 }
 
 section#social > div {
-	background: rgba(1, 1, 1, 0.7);
+	background: white;
 	background-size: cover;
-	height: 880px;
+	height: 980px;
 	width: 100%;
+}
+
+section#social > div div {
+	padding-top: 10px;
 }
 
 section#social > div h2 {
 	font-family: 'Lato', sans-serif;
 	font-size: 35px;
-	color: white;
-	padding-top: 120px;
+	color: #333;
+	padding: 5px;
+	padding-top: 100px;
+	border-bottom: 1px solid grey;
+	margin-left: 800px;
+	margin-right: 800px;
+}
+
+section#social > div > p {
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	color: #333;
+	padding-top: 50px;
 }
 
 section#social > div a {
@@ -191,19 +230,292 @@ section#social > div a {
 	color: #ffd700;
 }
 
-section#social > div ul span {
+section#social > div div span {
 	font-family: 'Pacifico', sans-serif;
 	font-size: 55px;
-	color: white;
+	color: #333;
+	display: flex;
+	justify-content: center;
+}
+
+section#social > div div div {
 	display: inline-block;
+	padding: 20px;
 }
 
-section#social > div ul li {
-	display: inline;
+section#social > div div ul div li {
+	list-style: none;
 }
 
-section#social > div ul li a:hover {
-	color: pink;
+section#social > div div ul div li a:hover {
+	color: skyblue;
+}
+
+section#social > div div ul div li p {
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: grey;
+} 
+
+section#social > div div ul div li h3 {
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 22px;
+	color: #333;
+}
+
+/*PORTFOLIO*/
+
+#portfolio {
+	height: 980px;
+	width: 100%;
+	background-color: #111;
+	text-align: center;
+	margin: 0;
+	border-top: 1px solid #222;
+	position: relative;
+}
+
+section#portfolio > div h2 {
+	font-family: 'Lato', sans-serif;
+	font-size: 35px;
+	color: white;
+	padding: 20px;
+	padding-top: 100px;
+	border-bottom: 1px solid grey;
+	margin-left: 800px;
+	margin-right: 800px;
+}
+
+section#portfolio > div p {
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 30px;
+	color: white;
+}
+
+.project-row {
+	padding-top: 160px;
+	display: flex;
+	justify-content: center;
+}
+
+.project {
+	height: 300px;
+	width: 350px;
+	border: 1px solid #ffd799;
+	background: url(images/debtpayback.png) no-repeat center center;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	display: flex;
+  	justify-content: center;
+}
+
+.project div {
+	height: 100%;
+	width: 100%;
+}
+
+.project div > span {
+	padding-top: 35%;
+	font-size: 50px;
+	color: transparent;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.project-list {
+	padding: 20px;
+}
+
+.project-name {
+	padding-top: 20px;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 23px;
+	color: #ffd799;
+}
+
+.project-description {
+	padding: 10px;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 18px;
+	color: white;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    /*box-shadow: 0 0 1px rgba(0, 0, 0, 0);*/
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.2);
+}
+
+.project div:hover {
+	background: rgba(255, 215, 0, 0.9);  
+	color: white;
+}
+
+.project div > span:hover {
+	color: white;
+	animation-name: animateproject;
+	animation-duration: .5s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;	
+	animation-direction: normal;
+	animation-delay: 1;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+	-webkit-transition: 4 ease-out webkit-transform .5;
+}
+
+@keyframes animateproject {
+	0% {
+		color: transparent;
+		font-size: 25px;
+	}
+
+	50% {
+		color:transparent;
+		font-size: 25px;
+	}
+
+	100% {
+		color: white;
+		font-size: 50px;
+	}
+}
+
+/*CONTACT*/
+
+#contact {
+	height: 855px;
+	width: 100%;
+	margin: 0;
+	background: white;
+	position: relative;
+}
+
+.contact-background {
+	height: 855px;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+.letter-image {
+	height: 28px;
+	width: 47px;
+	padding: 10px;
+	background: url(images/letter2.png) center no-repeat;
+	position: absolute;
+	left: 918px;
+	top: 277px;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.emailForm {
+	padding-top: 100px;
+	padding-left: 90px;
+	margin: 0 auto;
+	height: 400px;
+	width: 1100px;
+}
+
+section#contact h3 {
+	font-family: 'Lato', sans-serif;
+	font-size: 35px;
+	color: #333;
+	padding: 20px;
+	padding-top: 100px;
+	border-bottom: 1px solid #333;
+	margin-left: 800px;
+	margin-right: 800px;
+	text-align: center;
+}
+
+section#contact p {
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 20px;
+	color: #333;
+	margin-left: 800px;
+	margin-right: 800px;
+	text-align: center;
+}
+
+section#contact input {
+	height: 20px;
+	width: 450px;
+	border-radius: 3px;
+	padding: 17.3px;
+	margin: 5px;
+	font-family: 'Lato', sans-serif;
+	font-size: 1em;
+	color: black;
+	background: #dcffec;
+	border: grey 1px solid;
+}
+
+section#contact textarea {
+	height: 165px; 
+	width: 450px;
+	padding: 11px;
+	border-radius: 3px;
+	margin: 5px;
+	font-family: 'Lato', sans-serif;
+	font-size: 1em;
+	color: black;
+	background: #dcffec;
+	position: absolute;
+	border: grey 1px solid;
+}
+
+input[type=text]:focus, textarea:focus {
+  	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  	padding: 3px 0px 3px 3px;
+  	margin: 5px 1px 3px 0px;
+  	border: 1px solid rgba(81, 203, 238, 1);
+}
+
+button.submit {
+	height: 60px;
+	width: 300px;
+	background: #ffc700;
+	padding: 23px;
+	border-radius: 7px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	border: none;
+	color: black;
+	line-height: 50%;
+	margin-left: 360px;
+}
+
+
+button:hover {
+	box-shadow: 0 0 5px rgba(255, 215, 0, 1);
+	cursor: pointer;
+	background: #ffd700;
+	color: forestgreen;
+}
+
+::-webkit-input-placeholder {
+   color: #777;
 }
 
 /*FOOTER*/
@@ -213,11 +525,17 @@ section#social > div ul li a:hover {
 	background: #000;
 	height: 75px;
 	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
 }
 
-section.footer > div {
-	padding-left: 100px;
-	display: inline-block;
+section.footer div {
+	position: relative;
+}
+
+.foot-container {
+	padding-left: 40px;
 }
 
 section.footer > div > a {
@@ -225,26 +543,40 @@ section.footer > div > a {
 	color: #ffd700;
 	font-size: 32px;
 	text-decoration: none;
-}
-
-section.footer > div p {
-	font-family: 'Maven Pro', sans-serif;
-	font-size: 19px;
-	color: white;
-	display: inline;
-	padding-left: 820px;
+	position: relative;
 }
 
 section.footer > div a:hover {
-	color: #fdc099;
+	color: white;
+}
+
+.foot-container2 {
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 19px;
+	color: white;
+	padding-right: 40px;
+	padding-top: 22px;
+}
+
+section.footer > div > ul li {
+	display: inline;
+}
+
+section.footer > div > ul li a {
+	padding-right: 20px;
+	font-size: 30px;
+	color: #ffd700;
+	padding-top: 20px;
+	text-decoration: none;
 }
 
 
 
 /*NAME*/
+
 #animate-nameP {
 	animation-name: animatenameP;
-	animation-duration: .4s;
+	animation-duration: .2s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
@@ -273,7 +605,7 @@ section.footer > div a:hover {
 
 #animate-nameR {
 	animation-name: animatenameR;
-	animation-duration: .8s;
+	animation-duration: .4s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
@@ -302,7 +634,7 @@ section.footer > div a:hover {
 
 #animate-nameI {
 	animation-name: animatenameI;
-	animation-duration: 1.2s;
+	animation-duration: .6s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
@@ -331,7 +663,7 @@ section.footer > div a:hover {
 
 #animate-nameN {
 	animation-name: animatenameN;
-	animation-duration: 1.6s;
+	animation-duration: .8s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
@@ -360,7 +692,7 @@ section.footer > div a:hover {
 
 #animate-nameC {
 	animation-name: animatenameC;
-	animation-duration: 2s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
@@ -389,7 +721,7 @@ section.footer > div a:hover {
 
 #animate-nameE {
 	animation-name: animatenameE;
-	animation-duration: 1.8s;
+	animation-duration: 1.2s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
@@ -447,7 +779,7 @@ section.footer > div a:hover {
 
 #animate-nameO {
 	animation-name: animatenameO;
-	animation-duration: 1s;
+	animation-duration: 1.6s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
@@ -476,7 +808,7 @@ section.footer > div a:hover {
 
 #animate-nameN2 {
 	animation-name: animatenameN2;
-	animation-duration: .6s;
+	animation-duration: 1.8s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
@@ -505,7 +837,7 @@ section.footer > div a:hover {
 
 #animate-nameC2 {
 	animation-name: animatenameC2;
-	animation-duration: .4s;
+	animation-duration: 2s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
@@ -534,7 +866,7 @@ section.footer > div a:hover {
 
 #animate-nameO2 {
 	animation-name: animatenameO2;
-	animation-duration: .8s;
+	animation-duration: 2.2s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
@@ -563,7 +895,7 @@ section.footer > div a:hover {
 
 #animate-nameL {
 	animation-name: animatenameL;
-	animation-duration: 1.2s;
+	animation-duration: 2.4s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
@@ -592,7 +924,7 @@ section.footer > div a:hover {
 
 #animate-nameL2 {
 	animation-name: animatenameL2;
-	animation-duration: 1.4s;
+	animation-duration: 2.6s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
@@ -621,7 +953,7 @@ section.footer > div a:hover {
 
 #animate-nameI2 {
 	animation-name: animatenameI2;
-	animation-duration: 1.6s;
+	animation-duration: 2.8s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
@@ -650,7 +982,7 @@ section.footer > div a:hover {
 
 #animate-nameN3 {
 	animation-name: animatenameN3;
-	animation-duration: 2s;
+	animation-duration: 3s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
@@ -679,7 +1011,7 @@ section.footer > div a:hover {
 
 #animate-nameS {
 	animation-name: animatenameS;
-	animation-duration: 1.8s;
+	animation-duration: 3.2s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;

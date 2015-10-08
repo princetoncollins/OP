@@ -5,15 +5,43 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node /.bin/www"
   },
   "author": "Princeton Collins",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.13.3",
     "cors": "^2.7.1",
+    "desandro-classie": "^1.0.1",
     "express": "^4.13.3",
+    "hover.css": "^2.0.2",
     "http": "0.0.0",
     "mongoose": "^4.1.1"
   }
 }
+
+
+//Original code for development.
+
+// {
+//   "name": "onlineportfolio",
+//   "version": "1.0.0",
+//   "description": "Princeton's Online Portfolio",
+//   "main": "server.js",
+//   "scripts": {
+//     "test": "echo \"Error: no test specified\" && exit 1",
+//     "start": "node server.js"
+//   },
+//   "author": "Princeton Collins",
+//   "license": "ISC",
+//   "dependencies": {
+//     "body-parser": "^1.13.3",
+//     "cors": "^2.7.1",
+//     "desandro-classie": "^1.0.1",
+//     "express": "^4.13.3",
+//     "hover.css": "^2.0.2",
+//     "http": "0.0.0",
+//     "mongoose": "^4.1.1"
+//   }
+// }
+
