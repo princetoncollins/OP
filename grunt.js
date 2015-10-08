@@ -2,7 +2,13 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    min: {
+    pkg: grunt.file.readJSON('package.json'),
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      }
+    },
+    build: {
       dist: {
         src: 'public/*.js',
         dest: 'public.min.js'
