@@ -40,7 +40,7 @@ module.exports = router;
 
 mongoose.connect(mongoUri);
 mongoose.connection.once('open', function() {
-  console.log("Hey there, pawtna'! We are now connected to MongoDB at: ", mongoUri);
+  console.log("Hey there! We are now connected to MongoDB at: ", mongoUri);
 });
 
 app.listen(port, function() {
