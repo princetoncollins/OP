@@ -121,13 +121,17 @@ section#banner > div#content_layer {
 	color: #333;
 }
 
-.banner-subtext {
+/*.banner-subtext {
 	font-family: 'Maven Pro', sans-serif;
 	font-size: 35px;
 	color: #333;
 	position: absolute;
 	bottom: 40px;
 	padding-left: 350px;
+}*/
+
+@media {
+	
 }
 
 /*SKILLS*/
@@ -264,6 +268,22 @@ section#social > div div ul div li h3 {
 	color: #333;
 }
 
+.name {
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 22px;
+	color: #333;
+	padding-top: 15px;
+}
+
+.profession {
+	font-family: 'Maven Pro', sans-serif;
+	color: #333;
+	font-size: 15px;
+	width: 200px;
+	border-bottom: 1px solid #ffd700;
+	padding-bottom: 15px;
+	margin: 0 auto;
+}
 /*PORTFOLIO*/
 
 #portfolio {
@@ -570,7 +590,10 @@ section.footer > div > ul li a {
 	text-decoration: none;
 }
 
-
+.linkToMe {
+	position: relative;
+	left: 120px;
+}
 
 /*NAME*/
 
