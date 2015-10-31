@@ -13,4 +13,4 @@ app.config(function($routeProvider) {
       redirectTo: '/'
     });
 
-}) //End Config.
+}) //End Config. OK

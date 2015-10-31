@@ -1,24 +1,46 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
-  grunt.initConfig({
-      pkg: grunt.file.readJSON('package.json'),
-      concat: {
-        dist: {
-          src: [
-            'app.js',
-            'server.js'
-          ],
-          dest: {
-            'build/onlineportfolio.js'
+grunt.initConfig({
+  concat: {
+    js: {
+      src: ['public/app.js', 'server.js', 'public/controllers/mainCtrl.js'],
+      dest: 'build/js/scripts.js',
+    },
+    css: {
+      src: ['public/style.css', 'public/scripts-plugins/animate.css', 'public/scripts-plugins/hover-min.css'],
+      dest: 'build/css/styles.css'
+    },
+    html: {
+      src: ['public/index.html', 'public/views/main.html'],
+      dest: 'build/html/index.html'
+    }
+  },
+  watch: {
+    js: {
+      files: ['js/**/*.js'],
+      tasks: ['concat:js'],
+    },
+     css: {
+      files: ['css/**/*.css'],
+      tasks: ['concat:css'],
+    },
+    html: {
+      files: ['html/**/*.html'],
+      tasks: ['concat:html'],
+    }
+  },
+     serve: {
+        options: {
+            port: 1337
         }
-      }
-  });
+    }
+});
 
-  // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  
+grunt.loadNpmTasks('grunt-contrib-concat');
+grunt.loadNpmTasks('grunt-contrib-watch');
+grunt.loadNpmTasks('grunt-serve');
+grunt.registerTask('default', ['concat', 'watch', 'serve']);
 
 };
