@@ -31,7 +31,7 @@ grunt.initConfig({
   },
      serve: {
         options: {
-            port: 1337
+            port: 1337,
         }
     }
 });
