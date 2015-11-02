@@ -32,9 +32,9 @@ grunt.initConfig({
      serve: {
         options: {
             port: 1337,
-            'index': {
+            'index.js': {
             tasks: ['public/index.html', 'server.js'],
-            output: 'index'
+            output: 'index.js'
           }
         }
     }
