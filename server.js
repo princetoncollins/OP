@@ -1,7 +1,7 @@
 //Dependencies.
 var express = require('express');
 var router = express.Router();
-var sendgrid  = require('sendgrid')(process.env.U, process.env.PASSWORD)
+// var sendgrid  = require('sendgrid')(process.env.U, process.env.PASSWORD)
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var mongoose = require('mongoose');
@@ -21,20 +21,20 @@ app.use(bodyParser.json());
 // Navigation Endpoints.
 
 // Email.
-router.get('/', function(res, req) {
+// router.get('/', function(res, req) {
 
-sendgrid.send({
-  to:       process.env.EMAIL,
-  from:     'other@example.com',
-  subject:  'Hello World',
-  text:     'My first email through SendGrid.'
-}, function(err, json) {
-  if (err) { return res.send('Oh no!'); }
-  res.send('Yay!');	
-  console.log(json);
-});
+// sendgrid.send({
+//   to:       process.env.EMAIL,
+//   from:     'other@example.com',
+//   subject:  'Hello World',
+//   text:     'My first email through SendGrid.'
+// }, function(err, json) {
+//   if (err) { return res.send('Oh no!'); }
+//   res.send('Yay!');	
+//   console.log(json);
+// });
 
-});
+// });
 // Connections.
 module.exports = router;
 
