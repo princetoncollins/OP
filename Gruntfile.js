@@ -30,6 +30,7 @@ grunt.initConfig({
     }
   },
      serve: {
+        'path': 'public/index.html',
         options: {
             port: 1337,
             'index.js': {
