@@ -38,7 +38,6 @@ grunt.initConfig({
             // output: 'index.js'
           }
         }
-    }
 });
 
 
