@@ -43,6 +43,7 @@ grunt.initConfig({
       port: 1337,
       base: 'public'
     }
+  }
 });
 
 
