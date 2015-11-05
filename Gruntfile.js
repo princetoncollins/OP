@@ -29,7 +29,7 @@ grunt.initConfig({
       tasks: ['concat:html'],
     }
   },
-     serve: {
+  serve: {
         // 'path': 'public/index.html',
         options: {
             port: 1337
@@ -37,7 +37,12 @@ grunt.initConfig({
             // tasks: ['index.html', 'server.js'],
             // output: 'index.js'
           }
-        }
+        },
+  connect: {
+    example: {
+      port: 1337,
+      base: 'public'
+    },
 });
 
 
@@ -45,6 +50,7 @@ grunt.initConfig({
 grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-serve');
-grunt.registerTask('default', ['concat', 'serve']);
+grunt.registerTask('default', ['concat', 'serve', 'connect']);
+grunt.loadNpmTasks('grunt-connect');
 
 };
