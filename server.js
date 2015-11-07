@@ -15,11 +15,12 @@ var mongoUri = 'mongodb://localhost:27017/op';
 
 var app = express();
 
+app.use(express.static(__dirname + '/public'));
+
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-// app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 
 
