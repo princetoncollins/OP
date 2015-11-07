@@ -8,13 +8,18 @@ var mongoose = require('mongoose');
 var http = require('http');
 var grunt = require('grunt');
 var bower = require('bower');
+var path = require('path');
 
 var port = 1337;
 var mongoUri = 'mongodb://localhost:27017/op';
 
 var app = express();
 
-app.use(express.static(__dirname + '/public'));
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
+
+// app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 
 

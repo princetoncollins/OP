@@ -40,9 +40,8 @@ grunt.initConfig({
         },
   connect: {
     options: {
-      port: 1337,
+      port: 1337
       // base: 'public'
-      hostname: '0.0.0.0'
     }
   }
 });
