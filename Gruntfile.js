@@ -39,7 +39,7 @@ grunt.initConfig({
           }
         },
   connect: {
-    example: {
+    options: {
       port: 1337,
       base: 'public'
     }
