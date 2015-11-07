@@ -15,13 +15,13 @@ var port = 1337;
 
 var app = express();
 
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/public'));
 });
 
-app.use(bodyParser.json());
 
 
 // Navigation Endpoints.
