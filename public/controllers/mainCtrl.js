@@ -1,7 +1,9 @@
-var app = angular.module("onlineportfolio");
+// var app = angular.module('onlineportfolio', []);
 
-app.controller('mainCtrl', function($scope) {
+// app.controller('mainCtrl', function($scope) {
 
-	
 
-}) //End controller.
+
+// }); 
+
+//End controller.

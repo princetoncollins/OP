@@ -6,7 +6,7 @@ app.config(function($routeProvider) {
 	
 	.when('/', {
 		templateUrl: 'views/main.html',
-		controller: 'mainCtrl'
+		// controller: 'mainCtrl'
 	})
 	  
 	  .otherwise({
