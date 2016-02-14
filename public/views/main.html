@@ -19,24 +19,27 @@
 
 <div id="content_layer">
 	<div class="bannertext">
-		<span id="animate-nameP">P</span>&nbsp;
-		<span id="animate-nameR">R</span>&nbsp;
-		<span id="animate-nameI">I</span>&nbsp;
-		<span id="animate-nameN">N</span>&nbsp;
-		<span id="animate-nameC">C</span>&nbsp;
-		<span id="animate-nameE">E</span>&nbsp;
-		<span id="animate-nameT">T</span>&nbsp;
-		<span id="animate-nameO">O</span>&nbsp;
-		<span id="animate-nameN2">N</span>&nbsp;
-		&nbsp;
-		<span id="animate-nameC2">C</span>&nbsp;
-		<span id="animate-nameO2">O</span>&nbsp;
-		<span id="animate-nameL">L</span>&nbsp;
-		<span id="animate-nameL2">L</span>&nbsp;
-		<span id="animate-nameI2">I</span>&nbsp;
-		<span id="animate-nameN3">N</span>&nbsp;
-		<span id="animate-nameS">S</span>&nbsp;
+		<span id="animate-nameP">P</span>
+		<span id="animate-nameR">R</span>
+		<span id="animate-nameI">I</span>
+		<span id="animate-nameN">N</span>
+		<span id="animate-nameC">C</span>
+		<span id="animate-nameE">E</span>
+		<span id="animate-nameT">T</span>
+		<span id="animate-nameO">O</span>
+		<span id="animate-nameN2">N</span>
+		&nbsp;&nbsp;
+		<span id="animate-nameC2">C</span>
+		<span id="animate-nameO2">O</span>
+		<span id="animate-nameL">L</span>
+		<span id="animate-nameL2">L</span>
+		<span id="animate-nameI2">I</span>
+		<span id="animate-nameN3">N</span>
+		<span id="animate-nameS">S</span>
 	</div>
+	<!-- <div class="banner-subtext">
+		<h4 id="animate-title">Web Developer</h4>
+	</div> -->
 </div>
 
 </section>
@@ -55,7 +58,7 @@
 		<div><img class="img-contain" src="https://upload.wikimedia.org/wikipedia/commons/2/25/HTML5_Shiny_Icon.svg"></div>
 		<div><img class="img-contain" src="http://wizardsplace.com/wp-content/uploads/CSS3Logo.png"></div>
 		<div><img class="img-contain" src="https://static1.squarespace.com/static/513914cde4b0f86e34bbb954/513e41b5e4b03d54a0792254/54d9040be4b0a47608fcd12b/1424284504010/?format=1000w"></div>
-		<div><img class="img-contain" src="https://cozy.io/assets/images/javascript_logo.png"></div>
+		<div><img class="img-contain" src="http://3.bp.blogspot.com/-PTty3CfTGnA/TpZOEjTQ_WI/AAAAAAAAAeo/KeKt_D5X2xo/s1600/js.jpg"></div>
 		<div><img class="img-contain" src="https://git-for-windows.github.io/img/git_logo.png"></div>
 		<div><img class="img-contain" src="http://elemental.solutions/wp-content/uploads/2014/07/jquery_bumper.sh-600x600.png"></div>
 	 	<div style="position: relative; bottom: 40px;"><img class="img-contain" src="http://mean.io/system/assets/img/logos/express.png"></div>
@@ -147,7 +150,7 @@
 <section class="footer">
 	
 	<div class="foot-container">
-		<a href="./images/Princeton Resume Tech.pdf">see my resume</a>
+		<a href="./images/Princeton's Resume.pdf">see my resume</a>
 	</div>
 	
 	<div class="linkToMe">
@@ -158,7 +161,7 @@
 		</ul>
 	</div>
 
-	<div class="foot-container2">collinsprinceton@gmail.com • (801) 420-5478</div>
+	<div class="foot-container2"><p class="fa fa-envelope"></p>&nbsp;collinsprinceton@gmail.com &nbsp;&nbsp;•&nbsp;&nbsp; <p class="fa fa-phone"></p>&nbsp;(801) 420-5478</div>
 
 </section>
 
@@ -180,34 +183,56 @@ $('.fa fa-linkedin-square').on('click', function() {
     $(this).toggleClass('animated bounce');
 });
 
-$(document).on("scroll",function(){
-    if($(document).scrollTop() > 850){
+//Scroll Events/Animation.
+
+$(document).on("scroll", function() {
+    if ($(document).scrollTop() > 900){
         $("header").removeClass("large").addClass("small");
-    } else{
+    } else {
         $("header").removeClass("small").addClass("large");
     }
 });
 
-// window.onload = init();
+$("header").mouseover(function() {
+	if ($("header").hasClass("small") && $(document).scrollTop() > 900) { 
+		$("header").addClass("enlarge");
+	}
+});
+
+$("header").on("mouseleave", function() {
+	if ($("header").hasClass("enlarge")) {
+		$("header").removeClass("enlarge").addClass("small");
+	}
+});
+
+// $(document).on("scroll", function() {
+// 	if($(document).scrollTop() > 900){
+// 		$("nav li:first-of-type").addClass("highlight");
+// 	} else{
+// 		$("nav li:first-of-type").removeClass("highlight");
+// 	}
+// })
+
+//Parallax.
 
 function mYparallax() {
 	var content_layer = document.getElementById('content_layer');
 	var content_layer2 = document.getElementById('content_layer2');
 	var content_layer3 = document.getElementById('content_layer3');
-	content_layer.style.top = (window.pageYOffset / 1.95) + 'px';
+	content_layer.style.top = (window.pageYOffset / 3) + 'px';
 	content_layer2.style.top = (window.pageYOffset / 4) + 'px';
-	content_layer3.style.top = (window.pageYOffset / 0) + 'px';
+	// content_layer3.style.top = (window.pageYOffset / 0) + 'px';
 }
 
 window.addEventListener('scroll', mYparallax, false);
 
 $(document).ready(function() {
 	$('#navbar').localScroll(300);
-	$('#banner').parallax("50%", 10);
-	$('#skills').parallax("50%", 10);
-	$('#social').parallax("50%", 10);
-	$('#portfolio').parallax("50%", 10);
-	$('#contact').parallax("50%", 10);
+	$('#banner').parallax("50%", 1);
+	$('#skills').parallax("50%", 1);
+	$('#social').parallax("50%", 1);
+	$('#portfolio').parallax("50%", 1);
+	$('#contact').parallax("50%", 1);
 })
 </script>
 

@@ -29,6 +29,7 @@ header {
 
 nav {
 	width: 100%;
+	height: 100%;
 	margin: 0 auto;
 	float: left;
 }
@@ -40,6 +41,7 @@ header ul {
 header li { 
 	display: inline; 
 	float: left;
+	margin-right: 30px;
 }
 
 header a {
@@ -63,25 +65,26 @@ header a.active, header a:hover {
 	font-weight: bold;
 }
 
-header li {
-	margin-right: 30px;
-}
-
 header.large {
 	height: 120px;
+	border-bottom: 1px solid transparent;
 }
 
 header.large li {
 	margin-top: 45px;
+	height: 100%;
 }
 
 header.small {
 	height: 60px;
 	background: #333;
+	border-bottom: 1px solid grey;
 }
+
 
 header.small li {
 	margin-top: 19px;
+	height: 100%;
 }
 
 header.small li#nav-home a {
@@ -89,17 +92,42 @@ header.small li#nav-home a {
 	pointer-events: all;
 }
 
-header, nav, a, li{
-  transition: all 1s;
-  -moz-transition: all 1s; /* Firefox 4 */
-  -webkit-transition: all 1s; /* Safari and Chrome */
-  -o-transition: all 1s; /* Opera */
+header.enlarge {
+	height: 75px;
+	background: #333;
+	border-bottom: 1px solid grey;
+}
+
+header.enlarge li {
+	margin-top: 26px;
+	height: 100%;
+}
+
+header.enlarge li#nav-home a {
+	color: #ffd700;
+	pointer-events: all;
+}
+
+header, nav, li, a {
+	transition: all .5s;
+	-moz-transition: all .5s; /* Firefox 4 */
+	-webkit-transition: all .5s; /* Safari and Chrome */
+	-o-transition: all .5s; /* Opera */
+}
+
+ nav, a, li {
+	transition: all 1s;
+	-moz-transition: all 1s; /* Firefox 4 */
+	-webkit-transition: all 1s; /* Safari and Chrome */
+	-o-transition: all 1s; /* Opera */
 }
 
 /*BANNER*/
 
 #content_layer {
 	position: relative;
+	top: 80px;
+	left: 50px;
 }
 
 #banner {
@@ -114,29 +142,30 @@ header, nav, a, li{
 }
 
 section#banner > div#content_layer {
-	padding-top: 24%;
-	padding-left: 28%
+	padding-top: 23%;
+	padding-left: 23%;
 }
 
 .bannertext {
-	display: flex;
+	display: inline-block;
 	margin: 0 auto;
 	font-family: 'Lato', sans-serif;
-	font-size: 100px;
-	color: #333;
+	font-size: 40px;
+	color: transparent;
+	width: 100%;
 }
 
-/*.banner-subtext {
+div.bannertext span {
+	padding: 10px;
+}
+
+.banner-subtext {
 	font-family: 'Maven Pro', sans-serif;
 	font-size: 35px;
 	color: #333;
-	position: absolute;
-	bottom: 40px;
-	padding-left: 350px;
-}*/
-
-@media {
-	
+	position: relative;
+	bottom: 60px;
+	padding-left: 300px;
 }
 
 /*SKILLS*/
@@ -604,40 +633,40 @@ section.footer > div > ul li a {
 
 #animate-nameP {
 	animation-name: animatenameP;
-	animation-duration: .2s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 5;
+	animation-delay: 400ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
-	-webkit-transition: 4 ease-out webkit-transform .5;
+	-webkit-transition: .5 ease-out webkit-transform .5;
 }
 
 @keyframes animatenameP {
 	0% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 100px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
 #animate-nameR {
 	animation-name: animatenameR;
-	animation-duration: .4s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 2;
+	animation-delay: 400ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
 	-webkit-transition: .5 ease-out webkit-transform .5;
@@ -646,27 +675,27 @@ section.footer > div > ul li a {
 @keyframes animatenameR {
 	0% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
 #animate-nameI {
 	animation-name: animatenameI;
-	animation-duration: .6s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 4;
+	animation-delay: 466.667ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
 	-webkit-transition: .5 ease-out webkit-transform .5;
@@ -675,27 +704,27 @@ section.footer > div > ul li a {
 @keyframes animatenameI {
 	0% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
 #animate-nameN {
 	animation-name: animatenameN;
-	animation-duration: .8s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 1;
+	animation-delay: 66.6667ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
 	-webkit-transition: .5 ease-out webkit-transform .5;
@@ -704,17 +733,17 @@ section.footer > div > ul li a {
 @keyframes animatenameN {
 	0% {
 		color: transparent;
-		font-size: 180px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 180px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
@@ -724,7 +753,7 @@ section.footer > div > ul li a {
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 6;
+	animation-delay: 266.667ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
 	-webkit-transition: .5 ease-out webkit-transform .5;
@@ -733,27 +762,27 @@ section.footer > div > ul li a {
 @keyframes animatenameC {
 	0% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
 #animate-nameE {
 	animation-name: animatenameE;
-	animation-duration: 1.2s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 1;
+	animation-delay: 133.333ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
 	-webkit-transition: .5 ease-out webkit-transform .5;
@@ -762,27 +791,27 @@ section.footer > div > ul li a {
 @keyframes animatenameE {
 	0% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
 #animate-nameT {
 	animation-name: animatenameT;
-	animation-duration: 1.4s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 7;
+	animation-delay: 166.667ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
 	-webkit-transition: .5 ease-out webkit-transform .5;
@@ -791,27 +820,27 @@ section.footer > div > ul li a {
 @keyframes animatenameT {
 	0% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
 #animate-nameO {
 	animation-name: animatenameO;
-	animation-duration: 1.6s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 3;
+	animation-delay: 500ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
 	-webkit-transition: .5 ease-out webkit-transform .5;
@@ -820,27 +849,27 @@ section.footer > div > ul li a {
 @keyframes animatenameO {
 	0% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
 #animate-nameN2 {
 	animation-name: animatenameN2;
-	animation-duration: 1.8s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 8;
+	animation-delay: 400ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
 	-webkit-transition: .5 ease-out webkit-transform .5;
@@ -849,56 +878,56 @@ section.footer > div > ul li a {
 @keyframes animatenameN2 {
 	0% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
 #animate-nameC2 {
 	animation-name: animatenameC2;
-	animation-duration: 2s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 5;
+	animation-delay: 533.333ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
-	-webkit-transition: 4 ease-out webkit-transform .5;
+	-webkit-transition: .5 ease-out webkit-transform .5;
 }
 
 @keyframes animatenameC2 {
 	0% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 100px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
 #animate-nameO2 {
 	animation-name: animatenameO2;
-	animation-duration: 2.2s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 2;
+	animation-delay: 300ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
 	-webkit-transition: .5 ease-out webkit-transform .5;
@@ -907,27 +936,27 @@ section.footer > div > ul li a {
 @keyframes animatenameO2 {
 	0% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
 #animate-nameL {
 	animation-name: animatenameL;
-	animation-duration: 2.4s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 4;
+	animation-delay: 666.667ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
 	-webkit-transition: .5 ease-out webkit-transform .5;
@@ -936,27 +965,27 @@ section.footer > div > ul li a {
 @keyframes animatenameL {
 	0% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
 #animate-nameL2 {
 	animation-name: animatenameL2;
-	animation-duration: 2.6s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 7;
+	animation-delay: 500ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
 	-webkit-transition: .5 ease-out webkit-transform .5;
@@ -965,27 +994,27 @@ section.footer > div > ul li a {
 @keyframes animatenameL2 {
 	0% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
 #animate-nameI2 {
 	animation-name: animatenameI2;
-	animation-duration: 2.8s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 1;
+	animation-delay: 566.667ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
 	-webkit-transition: .5 ease-out webkit-transform .5;
@@ -994,27 +1023,27 @@ section.footer > div > ul li a {
 @keyframes animatenameI2 {
 	0% {
 		color: transparent;
-		font-size: 180px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 180px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
 #animate-nameN3 {
 	animation-name: animatenameN3;
-	animation-duration: 3s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 6;
+	animation-delay: 333.333ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
 	-webkit-transition: .5 ease-out webkit-transform .5;
@@ -1023,27 +1052,27 @@ section.footer > div > ul li a {
 @keyframes animatenameN3 {
 	0% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
 #animate-nameS {
 	animation-name: animatenameS;
-	animation-duration: 3.2s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;	
 	animation-direction: normal;
-	animation-delay: 1;
+	animation-delay: 300ms;
 	animation-play-state: running;
 	animation-fill-mode: forwards;
 	-webkit-transition: .5 ease-out webkit-transform .5;
@@ -1052,21 +1081,51 @@ section.footer > div > ul li a {
 @keyframes animatenameS {
 	0% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 110px;
+		font-size: 50px;
 	}
 
 	100% {
 		color: #333;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
+/*#animate-title {
+	animation-name: animatetitle;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;	
+	animation-direction: normal;
+	animation-delay: 0s;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+	-webkit-transition: 1 ease-out webkit-transform 1;
+}
 
+@keyframes animatetitle {
+	0% {
+		color: transparent;
+		position: relative;
+		top: 20px;
+	}
+
+	75% {
+		color: transparent;
+		position: relative;
+		top: 20px;
+	}
+
+	100% {
+		color: grey;
+		position: relative;
+		top: 0px;
+	}
+}*/
 
 
 

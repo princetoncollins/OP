@@ -9,6 +9,7 @@ var http = require('http');
 var grunt = require('grunt');
 var path = require('path');
 var fs = require('fs');
+var dotenv = require('dotenv');
 
 var port = 1338;
 var mongoUri = 'mongodb://localhost:27017/op';
@@ -70,5 +71,5 @@ mongoose.connection.once('open', function() {
 });
 
 app.listen(port, function() {
-  console.log('Sup, bruh. Listening on port: ', port);
+  console.log('Oooooohhtaaayy! Listening on port: ', port);
 });
