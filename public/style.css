@@ -1,10 +1,10 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
     margin: 0;
     padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
+    /*border: 0;*/
+    /*outline: 0;*/
+    /*font-size: 100%;*/
+    /*vertical-align: baseline;*/
     background: transparent;
 }
 
@@ -18,7 +18,7 @@ html, body {
 header {
 	height: 100px;
 	width: 100%;
-	padding-left: 60px;
+	padding-left: 30px;
 	text-align: left;
 	margin: 0;
 	float: left;
@@ -54,14 +54,13 @@ header a {
 
 header li#nav-home a {
 	color: transparent;
-	font-family: 'Orbitron', sans-serif;
-	padding-left: 1290px;
+	font-family: 'Lato', sans-serif;
 	pointer-events: none;
 }
 
-header a.active, header a:hover {
+header a.active, header a:hover, header.enlarge li#nav-home a:hover {
 	text-decoration: none;
-	color: #ffd730;
+	color: #efa69f;
 	font-weight: bold;
 }
 
@@ -73,6 +72,10 @@ header.large {
 header.large li {
 	margin-top: 45px;
 	height: 100%;
+}
+
+header.large li#nav-home a {
+	margin-right: 1290px;
 }
 
 header.small {
@@ -88,8 +91,10 @@ header.small li {
 }
 
 header.small li#nav-home a {
-	color: #ffd700;
+	color: white;
 	pointer-events: all;
+	float: left;
+	margin-right: 1290px;
 }
 
 header.enlarge {
@@ -104,7 +109,6 @@ header.enlarge li {
 }
 
 header.enlarge li#nav-home a {
-	color: #ffd700;
 	pointer-events: all;
 }
 
@@ -116,62 +120,44 @@ header, nav, li, a {
 }
 
  nav, a, li {
-	transition: all 1s;
-	-moz-transition: all 1s; /* Firefox 4 */
-	-webkit-transition: all 1s; /* Safari and Chrome */
-	-o-transition: all 1s; /* Opera */
+	transition: all .5s;
+	-moz-transition: all .5s; /* Firefox 4 */
+	-webkit-transition: all .5s; /* Safari and Chrome */
+	-o-transition: all .5s; /* Opera */
 }
 
 /*BANNER*/
-
-#content_layer {
-	position: relative;
-	top: 80px;
-	left: 50px;
-}
 
 #banner {
 	position: relative;
 	height: 980px;
 	width: 100%;
-	background: url(images/goldenfield.jpg) no-repeat center center fixed;
-	background-size: cover;
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
 }
 
-section#banner > div#content_layer {
-	padding-top: 23%;
-	padding-left: 23%;
+#content_layer {
+	height: 980px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	align-content: center;
+	background: #f9654a;
+	align-items: center;
 }
 
 .bannertext {
-	display: inline-block;
+	position: relative;
 	margin: 0 auto;
 	font-family: 'Lato', sans-serif;
 	font-size: 40px;
 	color: transparent;
-	width: 100%;
-}
-
-div.bannertext span {
-	padding: 10px;
-}
-
-.banner-subtext {
-	font-family: 'Maven Pro', sans-serif;
-	font-size: 35px;
-	color: #333;
-	position: relative;
-	bottom: 60px;
-	padding-left: 300px;
 }
 
 /*SKILLS*/
 
 #content_layer2 {
 	position: relative;
+	height: 980px;
+	width: 100%;
 }
 
 #skills {
@@ -179,7 +165,7 @@ div.bannertext span {
 	border-bottom: 1px solid #222;
 	height: 980px;
 	width: 100%;
-	background-color: #111;
+	background-color: white;
 	text-align: center;
 	margin: 0;
 	position: relative;
@@ -189,22 +175,23 @@ section#skills div#content_layer2 > h2 {
 	text-align: center;
 	font-family: 'Lato', sans-serif;
 	font-size: 35px;
-	color: white;
+	color: #333;
 	padding: 20px;
-	border-bottom: 1px solid grey;
 	margin-left: 800px;
 	margin-right: 800px;
 }
 
 section#skills div#content_layer2 > div {
-	padding: 20px;
 	display: inline-block;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 section#skills div#content_layer2 > p {
 	font-family: 'Maven Pro', sans-serif;
 	font-size: 28px;
-	color: white;
+	color: #333;
+	padding-bottom: 40px;
 }
 
 .img-contain {
@@ -230,34 +217,28 @@ section#skills div#content_layer2 > p {
 	position: relative;
 }
 
-section#social > div {
-	background: white;
+section#social:first-child {
+	background: #f9654a;
 	background-size: cover;
 	height: 980px;
 	width: 100%;
 }
 
-section#social > div div {
-	padding-top: 10px;
-}
-
 section#social > div h2 {
 	font-family: 'Lato', sans-serif;
-	font-size: 35px;
-	color: #333;
-	padding: 5px;
-	padding-top: 100px;
-	border-bottom: 1px solid grey;
-	margin-left: 800px;
-	margin-right: 800px;
+	font-size: 33px;
+	color: white;
+	padding-top: 90px;
+	padding-bottom: 15px;
+	margin-left: 559px;
+	margin-right: 559px;
 }
 
 section#social > div > p {
-	font-family: 'Maven Pro', sans-serif;
-	font-size: 30px;
-	font-weight: bold;
-	color: #333;
-	padding-top: 50px;
+	font-family: 'Corbel', sans-serif;
+	font-size: 23px;
+	color: rgba(250, 250, 250, 0.6);
+	padding-top: 20px;
 }
 
 section#social > div a {
@@ -265,68 +246,74 @@ section#social > div a {
 	padding-right: 50px;
 	font-size: 90px;
 	text-decoration: none;
-	color: #ffd700;
+	color: #f9654a;
 }
 
-section#social > div div span {
+section#social > div span {
 	font-family: 'Pacifico', sans-serif;
-	font-size: 55px;
+	font-size: 40px;
 	color: #333;
 	display: flex;
 	justify-content: center;
+	padding-top: 45px;
+	padding-bottom: 5px;
 }
 
-section#social > div div div {
+section#social > div div {
 	display: inline-block;
-	padding: 20px;
 }
 
-section#social > div div ul div li {
+section#social > div ul div li {
 	list-style: none;
 }
 
-section#social > div div ul div li a:hover {
+section#social > div ul div li a:hover {
 	color: skyblue;
 }
 
-section#social > div div ul div li p {
-	font-family: 'Maven Pro', sans-serif;
+section#social > div ul div {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+section#social > div ul div li p {
+	font-family: 'Corbel', sans-serif;
 	font-size: 18px;
-	font-weight: bold;
 	color: grey;
 } 
 
-section#social > div div ul div li h3 {
-	font-family: 'Maven Pro', sans-serif;
+section#social > div ul div li h3 {
+	font-family: 'Raleway', sans-serif;
 	font-size: 22px;
 	color: #333;
 }
 
 .name {
-	font-family: 'Maven Pro', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 22px;
-	color: #333;
+	color: white;
 	padding-top: 15px;
 }
 
 .profession {
-	font-family: 'Maven Pro', sans-serif;
-	color: #333;
+	font-family: 'Corbel', sans-serif;
+	color:  rgba(250, 250, 250, 0.6);
 	font-size: 15px;
 	width: 200px;
-	border-bottom: 1px solid #ffd700;
 	padding-bottom: 15px;
 	margin: 0 auto;
 }
+
 /*PORTFOLIO*/
 
 #portfolio {
 	height: 980px;
 	width: 100%;
-	background-color: #111;
+	background-color: #555;
 	text-align: center;
 	margin: 0;
 	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
 	position: relative;
 }
 
@@ -334,9 +321,7 @@ section#portfolio > div h2 {
 	font-family: 'Lato', sans-serif;
 	font-size: 35px;
 	color: white;
-	padding: 20px;
 	padding-top: 100px;
-	border-bottom: 1px solid grey;
 	margin-left: 800px;
 	margin-right: 800px;
 }
@@ -386,14 +371,14 @@ section#portfolio > div p {
 
 .project-name {
 	padding-top: 20px;
-	font-family: 'Maven Pro', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 23px;
-	color: #ffd799;
+	color: #f9654a;
 }
 
 .project-description {
 	padding: 10px;
-	font-family: 'Maven Pro', sans-serif;
+	font-family: 'Corbel', sans-serif;
 	font-size: 18px;
 	color: white;
 }
@@ -416,7 +401,7 @@ section#portfolio > div p {
 }
 
 .project div:hover {
-	background: rgba(255, 215, 0, 0.9);  
+	background: rgba(250, 128, 115, 0.5);  
 	color: white;
 }
 
@@ -456,7 +441,7 @@ section#portfolio > div p {
 	height: 855px;
 	width: 100%;
 	margin: 0;
-	background: white;
+	background: #f9654a;
 	position: relative;
 }
 
@@ -473,6 +458,8 @@ section#portfolio > div p {
 	width: 47px;
 	padding: 10px;
 	background: url(images/letter2.png) center no-repeat;
+	background-color: white;
+	border-radius: 7px;
 	position: absolute;
 	left: 918px;
 	top: 277px;
@@ -493,19 +480,18 @@ section#portfolio > div p {
 section#contact h3 {
 	font-family: 'Lato', sans-serif;
 	font-size: 35px;
-	color: #333;
-	padding: 20px;
+	color: white;
 	padding-top: 100px;
-	border-bottom: 1px solid #333;
+	padding-bottom: 20px;
 	margin-left: 800px;
 	margin-right: 800px;
 	text-align: center;
 }
 
 section#contact p {
-	font-family: 'Maven Pro', sans-serif;
+	font-family: 'Corbel', sans-serif;
 	font-size: 20px;
-	color: #333;
+	color: rgba(250, 250, 250, 0.7);
 	margin-left: 800px;
 	margin-right: 800px;
 	text-align: center;
@@ -548,14 +534,14 @@ input[type=text]:focus, textarea:focus {
 button.submit {
 	height: 60px;
 	width: 300px;
-	background: #ffc700;
+	background: white;
 	padding: 23px;
 	border-radius: 7px;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
 	font-size: 20px;
 	border: none;
-	color: black;
+	color: rgba(30, 30, 30, 0.2);
 	line-height: 50%;
 	margin-left: 360px;
 }
@@ -564,7 +550,7 @@ button.submit {
 button:hover {
 	box-shadow: 0 0 5px rgba(255, 215, 0, 1);
 	cursor: pointer;
-	background: #ffd700;
+	background: white;
 	color: forestgreen;
 }
 
@@ -576,7 +562,7 @@ button:hover {
 
 .footer {
 	border-top: 1px solid #333;
-	background: #000;
+	background: #333;
 	height: 75px;
 	width: 100%;
 	position: relative;
@@ -594,14 +580,14 @@ section.footer div {
 
 section.footer > div > a {
 	font-family: 'Pacifico', sans-serif;
-	color: #ffd700;
+	color: white;
 	font-size: 32px;
 	text-decoration: none;
 	position: relative;
 }
 
 section.footer > div a:hover {
-	color: white;
+	color: #efa69f;
 }
 
 .foot-container2 {
@@ -619,7 +605,7 @@ section.footer > div > ul li {
 section.footer > div > ul li a {
 	padding-right: 20px;
 	font-size: 30px;
-	color: #ffd700;
+	color: white;
 	padding-top: 20px;
 	text-decoration: none;
 }
@@ -646,17 +632,18 @@ section.footer > div > ul li a {
 @keyframes animatenameP {
 	0% {
 		color: transparent;
-		font-size: 50px;
+		position: relative;
+		right: 200px;
 	}
 
-	50% {
+	30% {
 		color: transparent;
-		font-size: 50px;
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+		position: relative;
+		right: 0px; 
 	}
 }
 
@@ -675,17 +662,17 @@ section.footer > div > ul li a {
 @keyframes animatenameR {
 	0% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+
 	}
 }
 
@@ -704,17 +691,17 @@ section.footer > div > ul li a {
 @keyframes animatenameI {
 	0% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+
 	}
 }
 
@@ -733,17 +720,19 @@ section.footer > div > ul li a {
 @keyframes animatenameN {
 	0% {
 		color: transparent;
-		font-size: 50px;
+		position: relative;
+		bottom: 200px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+		position: relative;
+		bottom: 0px;
 	}
 }
 
@@ -762,17 +751,19 @@ section.footer > div > ul li a {
 @keyframes animatenameC {
 	0% {
 		color: transparent;
-		font-size: 50px;
+		position: relative;
+		top: 200px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+		position: relative;
+		top: 0px;
 	}
 }
 
@@ -791,17 +782,19 @@ section.footer > div > ul li a {
 @keyframes animatenameE {
 	0% {
 		color: transparent;
-		font-size: 50px;
+		position: relative;
+		top: 300px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+		position: relative;
+		top: 0px;
 	}
 }
 
@@ -820,17 +813,19 @@ section.footer > div > ul li a {
 @keyframes animatenameT {
 	0% {
 		color: transparent;
-		font-size: 50px;
+		position: relative;
+		bottom: 400px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+		position: relative;
+		bottom: 0px;
 	}
 }
 
@@ -849,17 +844,19 @@ section.footer > div > ul li a {
 @keyframes animatenameO {
 	0% {
 		color: transparent;
-		font-size: 50px;
+		position: relative;
+		top: 300px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+		position: relative;
+		top: 0px;
 	}
 }
 
@@ -878,17 +875,19 @@ section.footer > div > ul li a {
 @keyframes animatenameN2 {
 	0% {
 		color: transparent;
-		font-size: 50px;
+		position: relative;
+		bottom: 200px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+		position: relative;
+		bottom: 0px;
 	}
 }
 
@@ -907,17 +906,17 @@ section.footer > div > ul li a {
 @keyframes animatenameC2 {
 	0% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+
 	}
 }
 
@@ -936,17 +935,17 @@ section.footer > div > ul li a {
 @keyframes animatenameO2 {
 	0% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+
 	}
 }
 
@@ -965,17 +964,19 @@ section.footer > div > ul li a {
 @keyframes animatenameL {
 	0% {
 		color: transparent;
-		font-size: 50px;
+		position: relative;
+		bottom: 300px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+		position: relative;
+		bottom: 0px;
 	}
 }
 
@@ -994,17 +995,19 @@ section.footer > div > ul li a {
 @keyframes animatenameL2 {
 	0% {
 		color: transparent;
-		font-size: 50px;
+		position: relative;
+		top: 300px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+		position: relative;
+		top: 0px;
 	}
 }
 
@@ -1023,17 +1026,19 @@ section.footer > div > ul li a {
 @keyframes animatenameI2 {
 	0% {
 		color: transparent;
-		font-size: 50px;
+		position: relative;
+		bottom: 300px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+		position: relative;
+		bottom: 0px;
 	}
 }
 
@@ -1052,17 +1057,19 @@ section.footer > div > ul li a {
 @keyframes animatenameN3 {
 	0% {
 		color: transparent;
-		font-size: 50px;
+		position: relative;
+		top: 200px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+		position: relative;
+		top: 0px;
 	}
 }
 
@@ -1081,104 +1088,93 @@ section.footer > div > ul li a {
 @keyframes animatenameS {
 	0% {
 		color: transparent;
-		font-size: 50px;
+		position: relative;
+		left: 400px;
 	}
 
 	50% {
 		color: transparent;
-		font-size: 50px;
+
 	}
 
 	100% {
-		color: #333;
-		font-size: 40px;
+		color: white;
+		position: relative;
+		left: 0px;
 	}
 }
-
-/*#animate-title {
-	animation-name: animatetitle;
-	animation-duration: 3s;
-	animation-timing-function: ease;
-	animation-iteration-count: 1;	
-	animation-direction: normal;
-	animation-delay: 0s;
-	animation-play-state: running;
-	animation-fill-mode: forwards;
-	-webkit-transition: 1 ease-out webkit-transform 1;
-}
-
-@keyframes animatetitle {
-	0% {
-		color: transparent;
-		position: relative;
-		top: 20px;
-	}
-
-	75% {
-		color: transparent;
-		position: relative;
-		top: 20px;
-	}
-
-	100% {
-		color: grey;
-		position: relative;
-		top: 0px;
-	}
-}*/
-
-
-
-
-
-
-
-
-
-
 
 /*NOT USING THIS AT THE MOMENT*/
 
 /*.hexcontainer {
+	position: relative;
+	bottom: 9px;
 	float: left;
-	width: 45%;
-	padding-left: 150px;
+	padding-left: 20%;
 }
 
 .hex {
 	float: left;
-	margin-left: 20px;
-	margin-bottom: -40px;
+	margin-left: 10px;
+	margin-bottom: -20px;
 }
 
 .hex .top {
 	width: 0;
-	border-bottom: 60px solid #bad500;
-	border-left: 104px solid transparent;
-	border-right: 104px solid transparent;
+	border-bottom: 30px solid white;
+	border-left: 47px solid transparent;
+	border-right: 47px solid transparent;
 }
 
 .hex .bottom {
 	width: 0;
-	border-top: 60px solid #bad500;
-	border-left: 104px solid transparent;
-	border-right: 104px solid transparent;
+	border-top: 30px solid white;
+	border-left: 47px solid transparent;
+	border-right: 47px solid transparent;
 }
 
 .hex .middle {
-	width: 208px;
-	height: 114px;
-	background-color: #bad500;
+	width: 94px;
+	height: 52px;
+	background-color: white;
 }
 
 .hex-row {
 	clear: left;
-	margin-left: 206px;
+	margin-left: 100px;
 }
 
 .hex-row2 {
     clear: left;
-    margin-left: 92px;
+    margin-left: 48px;
+}*/
+
+/*#animate-hex1{
+	animation-name: animatehex1;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;	
+	animation-direction: normal;
+	animation-delay: 300ms;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+	-webkit-transition: .5 ease-out webkit-transform .5;
+}
+
+@keyframes animatehex1 {
+	0% {
+		position: relative;
+		left: 400px;
+	}
+
+	100% {
+		position: relative;
+		left: 0px;
+		border-top: 30px solid #f9654a;
+		border-left: 47px solid transparent;
+		border-right: 47px solid transparent;
+		border-bottom: 30px solid white;
+	}
 }*/
 
 /*video#fullscreen {
